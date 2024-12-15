@@ -7,57 +7,100 @@
     <title>Seeds Attorneys</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #000033; /* Really Dark Blue */
+            color: #fff; /* White text for readability */
         }
         header {
-            background-color: rgba(29, 111, 183, 0.7);
-            background-image: url('https://your-link-to-the-image.com/image.png');
+            background: url('https://your-link-to-the-image.com/image.png') no-repeat center center;
             background-size: cover;
-            background-position: center;
             color: white;
             text-align: center;
-            padding: 50px 20px;
-            border-bottom: 5px solid #0a4877;
+            padding: 60px 20px;
+            border-bottom: 5px solid #000033;
         }
         header h1 {
             margin: 0;
             font-size: 3em;
             font-weight: 600;
+            color: #FFFFFF; /* White header text */
         }
         header p {
             font-size: 1.5em;
             margin-top: 10px;
+            font-weight: 300;
         }
         section {
             padding: 40px 20px;
-            text-align: left;
-            max-width: 800px;
+            text-align: center;
+            max-width: 1200px;
             margin: 0 auto;
         }
         section h2 {
             font-size: 2.5em;
-            color: #1D6FB7;
-            margin-bottom: 20px;
+            color: #FFFFFF; /* White color for subheadings */
+            margin-bottom: 30px;
             font-weight: 600;
         }
         section p {
             font-size: 1.2em;
             line-height: 1.6;
+            color: #ddd; /* Light gray for paragraph text */
+            margin-bottom: 30px;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .service-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 28%;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .service-card h3 {
+            font-size: 1.5em;
+            color: #00008B; /* Dark blue for service card headers */
+            margin-bottom: 15px;
+        }
+        .service-card p {
+            font-size: 1em;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+        .service-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00008B; /* Dark Blue */
+            color: white;
+            font-weight: 500;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .service-card a:hover {
+            background-color: #FFFFFF; /* White */
+            color: #00008B; /* Dark Blue */
         }
         footer {
-            background-color: #1D6FB7;
+            background-color: #00008B; /* Dark Blue footer */
             color: white;
             text-align: center;
             padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        }
+        footer p {
+            font-size: 1.2em;
         }
         footer a {
             color: #ecf0f1;
@@ -67,38 +110,21 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            color: #ffffff;
-            font-size: 1.2em;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-        .services ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .services li {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .services a {
-            color: #1D6FB7;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .services a:hover {
-            text-decoration: underline;
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-card {
+                width: 80%;
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
@@ -106,7 +132,7 @@
 
     <!-- Header Section -->
     <header>
-        <div class="container">
+        <div>
             <h1>Seeds Attorneys</h1>
             <p>Empowering African Founders with Tailored Legal Solutions</p>
         </div>
@@ -114,28 +140,41 @@
 
     <!-- Main Content Section -->
     <section>
-        <div class="container">
+        <div>
             <h2>Our Mission</h2>
-            <p>Seeds Attorneys is dedicated to empowering African founders who face challenges in establishing the right legal structures, becoming investment-ready, expanding into new markets, protecting their assets, and managing risks. Our mission is to provide tailored legal solutions that enable businesses to grow sustainably while navigating the complexities of the African legal landscape.</p>
+            <p>Seeds Attorneys is dedicated to empowering African founders who face challenges in establishing the right legal structures, becoming investment-ready, expanding into new markets, protecting their assets, and managing risks. We provide tailored legal solutions that enable businesses to grow sustainably while navigating the complexities of the African legal landscape.</p>
 
             <h2>Our Specialized Legal Services</h2>
-            <p>We also offer specialized legal services for African investment funds, ensuring that they are set up and operate under proper legal guidance, mitigating risks and promoting long-term success in their ventures.</p>
-        </div>
-    </section>
+            <p>At Seeds, we offer comprehensive legal services across various stages of your business lifecycle. Whether it's market entry, acquiring licenses, scaling into global markets, or fundraising, we are here to guide you. We ensure best industry standards, mitigating liabilities and fostering growth.</p>
 
-    <!-- Legal Technology Solutions Section -->
-    <section>
-        <div class="container">
-            <h2>Legal Technology Solutions</h2>
-            <p>We leverage technology to provide innovative and efficient legal services for your business. Explore our services below:</p>
-            <div class="services">
-                <ul>
-                    <li><a href="https://tally.so/r/nr0GWN" target="_blank">Notary Service</a></li>
-                    <li><a href="https://www.coachli.co/seedsattorneys/session/free-legal-consultation?id=339" target="_blank">Virtual Legal Consultations</a></li>
-                    <li><a href="https://tally.so/r/mB1PRA" target="_blank">Company Registrations</a></li>
-                    <li><a href="https://tally.so/r/wMrvlp" target="_blank">Tax Filings</a></li>
-                    <li><a href="https://tally.so/r/w8eAOx" target="_blank">Tax Clearance</a></li>
-                </ul>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>Market Entry & Licensing</h3>
+                    <p>We assist with market entry strategies, obtaining relevant licenses, and ensuring compliance with local and global laws.</p>
+                    <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Ongoing Legal Guidance</h3>
+                    <p>Our team offers continuous legal guidance to ensure your business is on track with compliance, governance, and regulations.</p>
+                    <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Risk Management & Compliance</h3>
+                    <p>We help you manage risks and adopt the best industry practices to safeguard your business from legal and financial liabilities.</p>
+                    <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
+                </div>
+            </div>
+
+            <div>
+                <h2>Legal Tech Consultation</h2>
+                <p>Explore our specialized legal tech consultation services designed to streamline your business processes using cutting-edge technology.</p>
+                <a href="/legal-tech-consultation" target="_blank">Explore Legal Tech Services</a>
+            </div>
+
+            <div>
+                <h2>Specialized Services for Funds</h2>
+                <p>We help funds with setup, deal structuring, and ongoing compliance. Our services are tailored to ensure that your fund operates smoothly, efficiently, and in full compliance with local and international regulations. Whether you're starting a new fund, structuring deals, or ensuring ongoing compliance, we have you covered.</p>
+                <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
             </div>
         </div>
     </section>
@@ -143,13 +182,6 @@
     <!-- Footer Section -->
     <footer>
         <p>Contact us at <a href="mailto:info@seedsattorneys.com.ng">info@seedsattorneys.com.ng</a></p>
-        
-        <!-- Social Links Section -->
-        <div class="social-links">
-            <a href="https://medium.com/@seedsattorneys" target="_blank">Follow Our Thinking</a>
-            <a href="https://x.com/seedsattorneys" target="_blank">Twitter</a>
-            <a href="https://www.linkedin.com/company/seedsattorneys" target="_blank">LinkedIn</a>
-        </div>
     </footer>
 
 </body>
