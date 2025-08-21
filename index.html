@@ -1,226 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Seeds Attorneys</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000033; /* Really Dark Blue */
-            color: #fff; /* White text for readability */
-        }
-        header {
-            position: relative;
-            overflow: hidden;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            border-bottom: 5px solid #000033;
-        }
-        header div {
-            position: relative;
-            z-index: 1;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            font-weight: 600;
-            color: #FFFFFF; /* White header text */
-        }
-        header p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-        section {
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        section h2 {
-            font-size: 2.5em;
-            color: #FFFFFF; /* White color for subheadings */
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-        section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #ddd; /* Light gray for paragraph text */
-            margin-bottom: 30px;
-        }
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
-        }
-        .service-card {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 28%;
-            transition: all 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        .service-card h3 {
-            font-size: 1.5em;
-            color: #00008B; /* Dark blue for service card headers */
-            margin-bottom: 15px;
-        }
-        .service-card p {
-            font-size: 1em;
-            color: #555;
-            margin-bottom: 15px;
-        }
-        .service-card a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #00008B; /* Dark Blue */
-            color: white;
-            font-weight: 500;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .service-card a:hover {
-            background-color: #FFFFFF; /* White */
-            color: #00008B; /* Dark Blue */
-        }
-        footer {
-            background-color: #00008B; /* Dark Blue footer */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        footer p {
-            font-size: 1.2em;
-        }
-        footer a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        footer .email-icon {
-            font-size: 1.6em;
-            margin-right: 10px;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-            header p {
-                font-size: 1.2em;
-            }
-            .services-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .service-card {
-                width: 80%;
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Seeds Attorneys</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000033; /* Really Dark Blue */
+      color: #fff; /* White text for readability */
+    }
+    header {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 5px solid #000033;
+    }
+    header div {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      font-weight: 600;
+      color: #FFFFFF; /* White header text */
+    }
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 2.5em;
+      color: #FFFFFF; /* White color for subheadings */
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    section p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #ddd; /* Light gray for paragraph text */
+      margin-bottom: 30px;
+    }
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .service-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 28%;
+      transition: all 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .service-card h3 {
+      font-size: 1.5em;
+      color: #00008B; /* Dark blue for service card headers */
+      margin-bottom: 15px;
+    }
+    .service-card p {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .service-card a, .open-form {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00008B; /* Dark Blue */
+      color: white;
+      font-weight: 500;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .service-card a:hover, .open-form:hover {
+      background-color: #FFFFFF; /* White */
+      color: #00008B; /* Dark Blue */
+    }
+    footer {
+      background-color: #00008B; /* Dark Blue footer */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer p {
+      font-size: 1.2em;
+    }
+    footer a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    footer .email-icon {
+      font-size: 1.6em;
+      margin: 0 5px;
+    }
+
+    /* === Modal Styles === */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      width: 90%;
+      max-width: 700px;
+      height: 80%;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: #ff3333;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+    }
+    .modal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      header p {
+        font-size: 1.2em;
+      }
+      .services-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .service-card {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header Section with YouTube Embed -->
-    <header>
-        <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;
-         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-         border-radius: 8px; will-change: transform;">
-          <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-            src="https://www.youtube.com/embed/hyHCWaKEJyM" 
-            title="YouTube video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+  <!-- Header Section with YouTube Embed -->
+  <header>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;
+      padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+      border-radius: 8px; will-change: transform;">
+      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+        src="https://www.youtube.com/embed/hyHCWaKEJyM" 
+        title="YouTube video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <section>
+    <div>
+      <h2>Our Specialized Legal Services</h2>
+      <p>At Seeds, we offer comprehensive legal services across various stages of your business lifecycle. Whether it's market entry, acquiring licenses, scaling into global markets, or fundraising, we are here to guide you. We ensure best industry standards, mitigating liabilities and fostering growth.</p>
+
+      <div class="services-container">
+        <div class="service-card">
+          <h3>Market Entry & Licensing</h3>
+          <p>We assist with market entry strategies, obtaining relevant licenses, and ensuring compliance with local and global laws.</p>
+          <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
         </div>
-    </header>
-
-    <!-- Main Content Section -->
-    <section>
-        <div>
-            <h2>Our Specialized Legal Services</h2>
-            <p>At Seeds, we offer comprehensive legal services across various stages of your business lifecycle. Whether it's market entry, acquiring licenses, scaling into global markets, or fundraising, we are here to guide you. We ensure best industry standards, mitigating liabilities and fostering growth.</p>
-
-            <div class="services-container">
-                <div class="service-card">
-                    <h3>Market Entry & Licensing</h3>
-                    <p>We assist with market entry strategies, obtaining relevant licenses, and ensuring compliance with local and global laws.</p>
-                    <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <h3>Ongoing Legal Guidance</h3>
-                    <p>Our team offers continuous legal guidance to ensure your business is on track with compliance, governance, and regulations.</p>
-                    <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <h3>Risk Management & Compliance</h3>
-                    <p>We help you manage risks and adopt the best industry practices to safeguard your business from legal and financial liabilities.</p>
-                    <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
-                </div>
-                <!-- ✅ Fundraising Support card -->
-                <div class="service-card">
-                    <h3>Fundraising Support</h3>
-                    <p>Structuring debt, equity or convertible security deals for Startups.</p>
-                    <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
-                </div>
-            </div>
-
-            <div>
-                <h2>Legal Tech Consultation</h2>
-                <p>Explore our specialized legal tech consultation services designed to streamline your business processes using cutting-edge technology.</p>
-                <div class="services-container">
-                    <div class="service-card">
-                        <h3>Legal Consultation</h3>
-                        <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Book a Session</a>
-                    </div>
-                    <div class="service-card">
-                        <h3>Notary Service</h3>
-                        <a href="https://tally.so/r/nr0GWN" target="_blank">Request Notary Service</a>
-                    </div>
-                    <div class="service-card">
-                        <h3>Nigeria Business Launch</h3>
-                        <a href="https://tally.so/r/mB1PRA" target="_blank">Start Nigeria Business Launch</a>
-                    </div>
-                    <div class="service-card">
-                        <h3>US Business Launch</h3>
-                        <a href="https://tally.so/r/mD852E" target="_blank">Start US Business Launch</a>
-                    </div>
-                    <div class="service-card">
-                        <h3>Compliance Filings</h3>
-                        <a href="https://tally.so/r/wMrvlp" target="_blank">Start Compliance Filing</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2>Specialized Services for Funds</h2>
-                <p>We help funds with setup, deal structuring, and ongoing compliance. Our services are tailored to ensure that your fund operates smoothly, efficiently, and in full compliance with local and international regulations. Whether you're starting a new fund, structuring deals, or ensuring ongoing compliance, we have you covered.</p>
-                <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
-            </div>
+        <div class="service-card">
+          <h3>Ongoing Legal Guidance</h3>
+          <p>Our team offers continuous legal guidance to ensure your business is on track with compliance, governance, and regulations.</p>
+          <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
         </div>
-    </section>
+        <div class="service-card">
+          <h3>Risk Management & Compliance</h3>
+          <p>We help you manage risks and adopt the best industry practices to safeguard your business from legal and financial liabilities.</p>
+          <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
+        </div>
+        <!-- ✅ Fundraising Support card -->
+        <div class="service-card">
+          <h3>Fundraising Support</h3>
+          <p>Structuring debt, equity or convertible security deals for Startups.</p>
+          <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
+        </div>
+      </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p><span class="email-icon">📧</span>Contact us at <a href="mailto:info@seedsattorneys.com.ng">info@seedsattorneys.com.ng</a></p>
-    </footer>
+      <div>
+        <h2>Legal Tech Consultation</h2>
+        <p>Explore our specialized legal tech consultation services designed to streamline your business processes using cutting-edge technology.</p>
+        <div class="services-container">
+          <div class="service-card">
+            <h3>Legal Consultation</h3>
+            <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Book a Session</a>
+          </div>
+          <div class="service-card">
+            <h3>Notary Service</h3>
+            <button class="open-form" onclick="openModal('https://tally.so/r/nr0GWN')">Request Notary Service</button>
+          </div>
+          <div class="service-card">
+            <h3>Nigeria Business Launch</h3>
+            <button class="open-form" onclick="openModal('https://tally.so/r/mB1PRA')">Start Nigeria Business Launch</button>
+          </div>
+          <div class="service-card">
+            <h3>US Business Launch</h3>
+            <button class="open-form" onclick="openModal('https://tally.so/r/mD852E')">Start US Business Launch</button>
+          </div>
+          <div class="service-card">
+            <h3>Compliance Filings</h3>
+            <button class="open-form" onclick="openModal('https://tally.so/r/wMrvlp')">Start Compliance Filing</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Specialized Services for Funds</h2>
+        <p>
+          We help fund and portfolio managers set up seamlessly with the SEC and secure the necessary regulatory licenses to operate legally in Nigeria. 
+          Our support extends beyond setup, providing continuous guidance on reporting, filings, and regulatory obligations. 
+          With us, fund managers stay compliant, confident, and ahead of evolving regulations.
+        </p>
+        <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339" target="_blank">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Contact us at <span class="email-icon">📧</span><a href="mailto:info@seedsattorneys.com.ng">info@seedsattorneys.com.ng</a></p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="formModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <iframe id="formFrame" src=""></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openModal(url) {
+      document.getElementById("formFrame").src = url;
+      document.getElementById("formModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("formModal").style.display = "none";
+      document.getElementById("formFrame").src = "";
+    }
+  </script>
 
 </body>
 </html>
