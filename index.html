@@ -49,83 +49,48 @@
         }
 
         .nav-overlay {
-            height: 100%;
-            width: 0; 
-            position: fixed;
-            z-index: 2000;
-            top: 0;
-            right: 0;
-            background: rgba(5, 10, 24, 0.98);
-            overflow-x: hidden;
-            transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100%; width: 0; position: fixed; z-index: 2000;
+            top: 0; right: 0; background: rgba(5, 10, 24, 0.98);
+            overflow-x: hidden; transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            display: flex; align-items: center; justify-content: center;
         }
 
-        .nav-content {
-            opacity: 0;
-            visibility: hidden;
-            width: 100%;
-            text-align: center;
-            transition: opacity 0.3s ease;
-        }
-
-        .nav-overlay.active .nav-content {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .nav-content a {
-            padding: 15px;
-            font-size: 2rem;
-            font-family: var(--font-serif);
-            color: var(--text-dim);
-            display: block;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
+        .nav-content { opacity: 0; visibility: hidden; width: 100%; text-align: center; transition: opacity 0.3s ease; }
+        .nav-overlay.active .nav-content { opacity: 1; visibility: visible; }
+        .nav-content a { padding: 15px; font-size: 2rem; font-family: var(--font-serif); color: var(--text-dim); display: block; text-decoration: none; transition: 0.3s; }
         .nav-content a:hover { color: var(--accent-blue); transform: scale(1.05); }
 
         .menu-trigger { cursor: pointer; z-index: 2200; padding: 5px; }
         .slice { width: 24px; height: 2px; background: var(--text-main); margin: 6px 0; transition: 0.4s; }
-
         .open-slices .slice:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
         .open-slices .slice:nth-child(2) { transform: rotate(45deg) translate(-5px, -6px); }
 
         .hero {
-            padding: 60px 5% 40px;
+            padding: 80px 5% 60px;
             text-align: center;
             background: radial-gradient(circle at center, #101e33 0%, var(--bg-dark) 70%);
         }
 
         .tagline { color: var(--accent-gold); letter-spacing: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
+        
         .main-title { 
             font-family: var(--font-serif);
-            font-size: clamp(2.2rem, 6vw, 4rem); 
+            font-size: clamp(1.8rem, 5vw, 4rem); 
             font-weight: 700; 
-            line-height: 1.1; 
+            line-height: 1.4; 
             margin-bottom: 20px; 
         }
 
+        /* Ensuring mobile lines don't break awkwardly */
+        .no-wrap { white-space: nowrap; }
+
         section { padding: 40px 5% 100px; max-width: 1300px; margin: 0 auto; }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
 
         .card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            background: var(--card-bg); padding: 40px; border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05); transition: all 0.4s ease;
+            display: flex; flex-direction: column; justify-content: space-between;
         }
 
         .card:hover { transform: translateY(-8px); border-color: var(--accent-blue); }
@@ -134,29 +99,23 @@
         .card p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
 
         .btn-link {
-            background: var(--accent-blue);
-            color: white;
-            text-decoration: none;
-            padding: 14px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-align: center;
-            transition: 0.3s;
-            font-size: 0.9rem;
+            background: var(--accent-blue); color: white; text-decoration: none;
+            padding: 14px 24px; border-radius: 8px; font-weight: 600;
+            text-align: center; transition: 0.3s; font-size: 0.9rem;
         }
 
         .whatsapp-popup {
             position: fixed; bottom: 30px; right: 30px; z-index: 1000;
             background: var(--whatsapp-green); width: 55px; height: 55px;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-            animation: pulse 2s infinite;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(0.95); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(0.95); }
+        @keyframes pulse { 0% { transform: scale(0.95); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(0.95); } }
+        
+        @media (max-width: 600px) {
+            .main-title { font-size: 1.6rem; } 
+            .hero { padding-top: 40px; }
         }
     </style>
 </head>
@@ -186,107 +145,66 @@
 
     <header class="hero">
         <div class="tagline">Startup & IP Law Firm</div>
-        <h1 class="main-title">Seeding Growth...<br>Expanding Frontiers</h1>
+        <h1 class="main-title">
+            <span>Seeding Growth...</span><br>
+            <span class="no-wrap">Expanding Frontiers</span>
+        </h1>
     </header>
 
     <section>
         <div class="grid">
             <div class="card">
-                <div>
-                    <i class="fas fa-fingerprint"></i>
-                    <h3>IP Protection</h3>
-                    <p>Trademarking, copyrighting, and IP strategy for founders and tech pioneers.</p>
-                </div>
+                <div><i class="fas fa-fingerprint"></i><h3>IP Protection</h3><p>Trademarking, copyrighting, and IP strategy for founders and tech pioneers.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-globe-americas"></i>
-                    <h3>US & Nigeria Incorporation</h3>
-                    <p>Strategic business formation and structural setup for startups in the US and Nigeria.</p>
-                </div>
+                <div><i class="fas fa-globe-americas"></i><h3>US & Nigeria Incorporation</h3><p>Strategic business formation and structural setup for startups in the US and Nigeria.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Fundraising Support</h3>
-                    <p>Structuring equity, convertible instruments, and debt for venture-backed companies.</p>
-                </div>
+                <div><i class="fas fa-chart-line"></i><h3>Fundraising Support</h3><p>Structuring equity, convertible instruments, and debt for venture-backed companies.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-handshake"></i>
-                    <h3>Ongoing Legal Support</h3>
-                    <p>Retainer-based legal support to ensure your startup grows sustainably, remains compliant and protected as you scale.</p>
-                </div>
+                <div><i class="fas fa-handshake"></i><h3>Ongoing Legal Support</h3><p>Retainer-based legal support to ensure your startup grows sustainably, remains compliant and protected as you scale.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-file-contract"></i>
-                    <h3>Contract & Business Advisory</h3>
-                    <p>Drafting, reviewing, and negotiating high-stakes commercial agreements.</p>
-                </div>
+                <div><i class="fas fa-file-contract"></i><h3>Contract & Business Advisory</h3><p>Drafting, reviewing, and negotiating high-stakes commercial agreements.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Global Data Compliance</h3>
-                    <p>Ensuring tech startups meet NDPA, GDPR, and HIPAA standards across global jurisdictions.</p>
-                </div>
+                <div><i class="fas fa-shield-alt"></i><h3>Global Data Compliance</h3><p>Ensuring tech startups meet NDPA, GDPR, and HIPAA standards across global jurisdictions.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-robot"></i>
-                    <h3>AI & Emerging Tech</h3>
-                    <p>Acting as product counsel for AI and emerging tech products, providing legal support and regulatory compliance advisory throughout the product lifecycle.</p>
-                </div>
+                <div><i class="fas fa-robot"></i><h3>AI & Emerging Tech</h3><p>Acting as product counsel for AI and emerging tech products, providing legal support and regulatory compliance advisory throughout the product lifecycle.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-clapperboard"></i>
-                    <h3>Entertainment & Creative Economy Law</h3>
-                    <p>Protecting the legal interests of creatives and companies in music, fashion, arts, film, television, and digital media.</p>
-                </div>
+                <div><i class="fas fa-clapperboard"></i><h3>Entertainment & Creative Economy Law</h3><p>Protecting the legal interests of creatives and companies in music, fashion, arts, film, television, and digital media.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>Antitrust, Competition & Consumer Protection</h3>
-                    <p>Navigating antitrust and competition laws to ensure compliance with market and consumer rights regulation.</p>
-                </div>
+                <div><i class="fas fa-balance-scale"></i><h3>Antitrust, Competition & Consumer Protection</h3><p>Navigating antitrust and competition laws to ensure compliance with market and consumer rights regulation.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>Mergers & Acquisitions</h3>
-                    <p>Comprehensive support for M&A, including transaction due diligence, deal structuring, legal advisory, and regulatory compliance.</p>
-                </div>
+                <div><i class="fas fa-project-diagram"></i><h3>Mergers & Acquisitions</h3><p>Comprehensive support for M&A, including transaction due diligence, deal structuring, legal advisory, and regulatory compliance.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
 
             <div class="card">
-                <div>
-                    <i class="fas fa-gavel"></i>
-                    <h3>Fast-Track Dispute Resolution</h3>
-                    <p>Deploy fast-track dispute resolution permitted by law to ensure speedy delivery of justice for our clients.</p>
-                </div>
+                <div><i class="fas fa-gavel"></i><h3>Fast-Track Dispute Resolution</h3><p>Deploy fast-track dispute resolution permitted by law to ensure speedy delivery of justice for our clients.</p></div>
                 <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" class="btn-link">Get Started</a>
             </div>
         </div>
@@ -300,7 +218,6 @@
         function toggleNav() {
             const nav = document.getElementById("myNav");
             const trigger = document.getElementById("menuToggle");
-            
             if (nav.style.width === "100%") {
                 nav.style.width = "0%";
                 nav.classList.remove('active');
