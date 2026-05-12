@@ -66,7 +66,7 @@
         .open-slices .slice:nth-child(2) { transform: rotate(45deg) translate(-5px, -6px); }
 
         .hero {
-            padding: 80px 5% 60px;
+            padding: 80px 5% 40px;
             text-align: center;
             background: radial-gradient(circle at center, #101e33 0%, var(--bg-dark) 70%);
         }
@@ -82,6 +82,63 @@
         }
 
         .no-wrap { white-space: nowrap; }
+
+        /* BRAND SLIDER STYLES */
+        .logo-slider-container {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 40px;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .brand-header {
+            color: var(--text-dim);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            opacity: 0.6;
+            text-align: center;
+        }
+
+        .logo-track {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+        }
+
+        .logo-item {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            color: var(--text-dim);
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .logo-item img {
+            height: 30px;
+            width: auto;
+            filter: grayscale(100%) brightness(1.4) opacity(0.5);
+            transition: 0.3s ease;
+        }
+
+        .logo-item img:hover {
+            filter: grayscale(0%) brightness(1) opacity(1);
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
 
         section { padding: 40px 5% 100px; max-width: 1300px; margin: 0 auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
@@ -116,6 +173,7 @@
         @media (max-width: 600px) {
             .main-title { font-size: 1.6rem; } 
             .hero { padding-top: 40px; }
+            .logo-track { gap: 40px; }
         }
     </style>
 </head>
@@ -132,7 +190,6 @@
     <div id="myNav" class="nav-overlay">
         <div class="nav-content">
             <a href="#" onclick="toggleNav()">HOME</a>
-            <a href="https://www.linkedin.com/in/chioma-esuabom/" target="_blank">MANAGING PARTNER</a>
             <a href="https://medium.com/@seedsattorneys" target="_blank">STARTUP LIBRARY</a>
             <a href="https://www.coachli.co/seedsattorneys/session/discovery-call?id=339/" target="_blank">BOOK CONSULTATION</a>
             <a href="https://tally.so/r/nr0GWN" target="_blank">NOTARY SERVICES</a>
@@ -149,6 +206,28 @@
             <span>Seeding Growth...</span><br>
             <span class="no-wrap">Expanding Frontiers</span>
         </h1>
+
+        <div class="logo-slider-container">
+            <h2 class="brand-header">Trusted by Industry Leaders</h2>
+            <div class="logo-track">
+                <!-- Set 1 -->
+                <div class="logo-item"><img src="evet.svg" alt="Evet Technology" onerror="this.style.display='none'; this.parentElement.innerHTML='Evet Technology'"></div>
+                <div class="logo-item"><img src="Assetrise-Main-Logo.svg" alt="Assetrise" onerror="this.style.display='none'; this.parentElement.innerHTML='Assetrise'"></div>
+                <div class="logo-item"><img src="logo.png" alt="Trusted Choice Assets" onerror="this.style.display='none'; this.parentElement.innerHTML='Trusted Choice Assets'"></div>
+                <div class="logo-item"><img src="feritude (1).png" alt="Fertitude" onerror="this.style.display='none'; this.parentElement.innerHTML='Fertitude'"></div>
+                <div class="logo-item"><img src="alajo.png" alt="Alajo Technologies" onerror="this.style.display='none'; this.parentElement.innerHTML='Alajo Technologies'"></div>
+                <div class="logo-item"><img src="FLAPCOOP-logo-2.png" alt="Flapcoop" onerror="this.style.display='none'; this.parentElement.innerHTML='Flapcoop'"></div>
+                <div class="logo-item"><img src="PNG_LOGO_JVMC-removebg-preview-1.png" alt="JV Management" onerror="this.style.display='none'; this.parentElement.innerHTML='JV Management'"></div>
+                <!-- Set 2 (Duplicated for Loop) -->
+                <div class="logo-item"><img src="evet.svg" alt="Evet Technology" onerror="this.style.display='none'; this.parentElement.innerHTML='Evet Technology'"></div>
+                <div class="logo-item"><img src="Assetrise-Main-Logo.svg" alt="Assetrise" onerror="this.style.display='none'; this.parentElement.innerHTML='Assetrise'"></div>
+                <div class="logo-item"><img src="logo.png" alt="Trusted Choice Assets" onerror="this.style.display='none'; this.parentElement.innerHTML='Trusted Choice Assets'"></div>
+                <div class="logo-item"><img src="feritude (1).png" alt="Fertitude" onerror="this.style.display='none'; this.parentElement.innerHTML='Fertitude'"></div>
+                <div class="logo-item"><img src="alajo.png" alt="Alajo Technologies" onerror="this.style.display='none'; this.parentElement.innerHTML='Alajo Technologies'"></div>
+                <div class="logo-item"><img src="FLAPCOOP-logo-2.png" alt="Flapcoop" onerror="this.style.display='none'; this.parentElement.innerHTML='Flapcoop'"></div>
+                <div class="logo-item"><img src="PNG_LOGO_JVMC-removebg-preview-1.png" alt="JV Management" onerror="this.style.display='none'; this.parentElement.innerHTML='JV Management'"></div>
+            </div>
+        </div>
     </header>
 
     <section>
